@@ -35,21 +35,21 @@ var map = L.map('map').setView([44.11,-72.99], 13);
 
 L.tileLayer('http://b.tile.stamen.com/watercolor/{z}/{x}/{y}.png').addTo(map);
 
-var hillurl = "http://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/IMG_VCGI_LIDARHILLSHD_SP_CACHE_v1/ImageServer";
+var hillurl = "https://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/IMG_VCGI_LIDARHILLSHD_SP_CACHE_v1/ImageServer";
 
 var hill = L.esri.imageMapLayer({
   url: hillurl,
   opacity: 0.40
 }).addTo(map);
 
-var demurl = "http://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/IMG_VCGI_LIDARDEM_SP_NOCACHE_v1/ImageServer";
+var demurl = "https://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/IMG_VCGI_LIDARDEM_SP_NOCACHE_v1/ImageServer";
 
 var dem = L.esri.imageMapLayer({
   url: demurl,
   opacity: 0
 }).addTo(map);
 
-var vhdlinesurl = "http://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/OPENDATA_VCGI_WATER_SP_NOCACHE_v1/MapServer/10/";
+var vhdlinesurl = "https://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/OPENDATA_VCGI_WATER_SP_NOCACHE_v1/MapServer/10/";
 
 	var vhdlines = L.esri.featureLayer({
         url: vhdlinesurl,
@@ -63,7 +63,7 @@ var vhdlinesurl = "http://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_service
       				}
     }}).addTo(map);
 
-var traillinesurl = "http://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/OPENDATA_VCGI_EMERGENCY_SP_NOCACHE_v1/MapServer/21/";
+var traillinesurl = "https://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/OPENDATA_VCGI_EMERGENCY_SP_NOCACHE_v1/MapServer/21/";
 
 	var traillines = L.esri.featureLayer({
 		url: traillinesurl,
